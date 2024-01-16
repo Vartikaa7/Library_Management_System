@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book Detail</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include("includes/header.ejs") %>
+    <div class="signinbody">
+    <form class="form"  method="post" action="/books_details">
+        <h3>Add Book Detail</h3>
+        <input type="text" name="Bookname" placeholder="Enter Book name">
+        <input type="text" name="Author" placeholder="Enter Author name">
+        <input type="number" name="stock" placeholder="Enter count of book"> 
+        <button class="addbookbtn">Submit</button>
+    </form>
+    </div>
+</body>
+</html>

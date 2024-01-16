@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Signin</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include("includes/header.ejs") %>
+    <div class="signinbody">
+    <form class="form" method="post" action="/SigninManager">
+        <h3>Manager Signin</h3>
+        <input type="text" name="username" placeholder="username">
+        <input type="email" name="email" placeholder="email">
+        <input type="password" name="password" placeholder="password">
+        <input type="password" name="confpass" placeholder="confirm password">
+        <input type="password" name="tokenkey" placeholder="Token Key">
+        <button>Submit</button>
+    </form>
+    </div>
+</body>
+</html>

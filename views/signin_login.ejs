@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Signin</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body></body>
+    <%- include("includes/header.ejs") %>
+    <div class="signinbody">
+    <form class="form" method="post" action="/Signin">
+        <h3>User Signin</h3>
+        <a href="/SigninManager">Sign as Manager</a>
+        <label for="login"><p>Already Have account?</p></label>
+        <a href="/login" id="login">Login Account</a>
+        <input type="text" placeholder="Enter your username" name="username">
+        <input type="email" placeholder="Enter your email" name="email">
+        <input type="password" placeholder="Enter password" name="password">
+        <input type="password" placeholder="Enter confirm password" name="confpass"> 
+        <button>Submit</button>
+    </form>
+    </div>
+</body>
+</html>

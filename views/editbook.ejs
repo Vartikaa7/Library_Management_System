@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Book Detail</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include("includes/header.ejs") %>
+    <div class="signinbody">
+    <form method="post" class="form" action="/books_detail/<%= data._id %>/?_method=PUT">
+        <h3>Edit Book Detail</h3>
+        <input type="text" name="bookname" value="<%=data.Bookname %>">
+        <input type="text" name="Author" value="<%=data.Author %>">
+        <input type="number" name="stock" value="<%= data.stock %>">
+        <button>Edit</button>
+    </form>
+    </div>
+</body>
+</html>
