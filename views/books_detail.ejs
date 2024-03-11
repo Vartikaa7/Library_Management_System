@@ -9,8 +9,8 @@
 <body>
     <%- include("includes/header.ejs") %>
     <div class="main">
-        <% if (user.role=="manager"){ %>
-            <button onclick="window.location.href='/addbook'">Add A Book</button>
+        <% if ( user && user.role=="manager"){ %>
+            <button onclick="window.location.href='/book/addbook'">Add A Book</button>
         <% } %>
         <table>
             <thead>
@@ -28,14 +28,13 @@
                         <td><%=data.Sno %></td>
                         <td><%=data.Bookname %></td>
                         <td><%=data.stock %></td>
-                        <% if (user.role=="user"){ %>
-                            <td><button onclick="window.location.href='/issuebook/<%= data._id %>'">Issue Book</button>
-                            <button onclick="window.location.href='/returnbook/<%= data._id %>'">Return Book</button></td>
+                        <% if (user && user.role=="manager"){ %>
+                            <td> <form style="display: inline;" method="post" action="/book/books_detail/<%= data._id %>/?_method=DELETE"><button>Delete Book</button></form>
+                            <button onclick="window.location.href='/book/editbook/<%= data._id %>'">Edit Book</button></td>
+                        <% }else{ %>
+                            <td><button onclick="window.location.href='/book/issuebook/<%= data._id %>'">Issue Book</button>
+                            <button onclick="window.location.href='/book/returnbook/<%= data._id %>'">Return Book</button></td>
                         <% }; %>
-                        <% if (user.role=="manager"){ %>
-                            <td> <form style="display: inline;" method="post" action="/books_detail/<%= data._id %>/?_method=DELETE"><button>Delete Book</button></form>
-                            <button onclick="window.location.href='/editbook/<%= data._id %>'">Edit Book</button></td>
-                        <% } %>
                         
                     </tr>
 

@@ -22,6 +22,12 @@ let userSchema= new mongoose.Schema({
         type:String,
         required:true,
         enum:["user","manager"]
+    },
+    book:{
+        issuebook:[{
+        }],
+        returnbook:[{
+        }]
     }
 });
 

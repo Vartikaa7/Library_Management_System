@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const BookData=require("./models/bookdata.js");
 
 async function main(){
-    await mongoose.connect('mongodb://127.0.0.1:27017/library');
+    await mongoose.connect('mongodb://localhost:27017/library_management_system');
 }
 main().then(()=>{
     console.log("connection successful");

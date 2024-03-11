@@ -9,11 +9,11 @@
 <body></body>
     <%- include("includes/header.ejs") %>
     <div class="signinbody">
-    <form class="form" method="post" action="/Signin">
+    <form class="form" method="post" action="/user/Signin">
         <h3>User Signin</h3>
-        <a href="/SigninManager">Sign as Manager</a>
+        <a href="/user/SigninManager">Sign as Manager</a>
         <label for="login"><p>Already Have account?</p></label>
-        <a href="/login" id="login">Login Account</a>
+        <a href="/user/login" id="login">Login Account</a>
         <input type="text" placeholder="Enter your username" name="username">
         <input type="email" placeholder="Enter your email" name="email">
         <input type="password" placeholder="Enter password" name="password">
